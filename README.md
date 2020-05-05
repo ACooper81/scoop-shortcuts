@@ -1,6 +1,10 @@
 # Scoop Apps Bucket
 
 `scoop bucket add Scoop-Apps https://github.com/ACooper81/scoop-apps`
+`scoop bucket add Scoop-Shortcutss https://github.com/ACooper81/scoop-shortcuts`
+
+# Description
+This bucket requires that you add the Scoop-Apps bucket using the command above.
 
 # Scoop URL's
 Website - https://scoop.sh/  
