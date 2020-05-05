@@ -1,6 +1,7 @@
 # Scoop Apps Bucket
 
 `scoop bucket add Scoop-Apps https://github.com/ACooper81/scoop-apps`
+
 `scoop bucket add Scoop-Shortcutss https://github.com/ACooper81/scoop-shortcuts`
 
 # Description
