@@ -8,14 +8,14 @@
     "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
     "installer": {
         "script": [
-            "$ProgramFilesPath = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
+            "$ProgramFilesPath = [Environment]::GetFolderPath(\"ProgramFiles\")",
             "$ProgramFilesX86Path = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
             "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
             "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
             "$ShortcutName = \"Google Chrome\"",
             "$ShortcutProgramType = \"Internet Browsers\"",
-            "$ShortcutTarget = \"$ProgramFilesPath\\Google\\Chrome\\Application\\chrome.exe\"",
+            "$ShortcutTarget = \"$ProgramFilesX86Path\\Google\\Chrome\\Application\\chrome.exe\"",
             "$ShortcutDestination = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
             "{",
