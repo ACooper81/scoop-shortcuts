@@ -1,0 +1,27 @@
+{
+    "version": "200719.1706",
+    "description": "Create Google Chrome shortcuts",
+    "homepage": "https://websiteurl",
+    "license": "",
+    "notes": "It will only create the shortcuts if the program is installed in the default location",
+    "installer": {
+        "script": [
+            "$ProgramFilesPath = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
+            "$ProgramFilesX86Path = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
+            "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
+            "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
+            "$EnvironmentSpecialFolder = https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1",
+            "$ShortcutName = \"Google Chrome\"",
+            "$ShortcutProgramType = \"Internet Browsers\"",
+            "$ShortcutTarget = \"$ProgramFilesPath\\programname\\filename.exe\"",
+            "$ShortcutDestination = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
+            "if (Test-Path \"$ShortcutTarget\")",
+            "{",
+            "   $WshShell = New-Object -comObject WScript.Shell",
+            "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestination\")",
+            "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
+            "   $Shortcut.Save()",
+            "}"
+        ]
+    }
+}
