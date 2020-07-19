@@ -8,7 +8,7 @@
     "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
     "installer": {
         "script": [
-            "$ProgramFilesPath = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
+            "$ProgramFilesPath = [Environment]::GetFolderPath(\"ProgramFiles\")",
             "$ProgramFilesX86Path = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
             "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
             "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
