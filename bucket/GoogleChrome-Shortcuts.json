@@ -1,7 +1,7 @@
 {
     "version": "200719.1706",
     "description": "Create Google Chrome shortcuts",
-    "homepage": "https://websiteurl",
+    "homepage": "https://www.google.com/chrome/",
     "license": "",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
     "url": "https://raw.githubusercontent.com/ACooper81/SharedFiles/master/README.md",
