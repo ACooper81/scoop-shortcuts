@@ -4,6 +4,7 @@
     "homepage": "https://websiteurl",
     "license": "",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
+    "url": "https://raw.githubusercontent.com/ACooper81/SharedFiles/master/README.md",
     "installer": {
         "script": [
             "$ProgramFilesPath = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
@@ -21,7 +22,8 @@
             "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestination\")",
             "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
             "   $Shortcut.Save()",
-            "}"
+            "}",
+            "Remove-Item \"$dir\\README.md\" -Force"
         ]
     }
 }
