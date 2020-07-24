@@ -25,6 +25,10 @@
             "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
             "   $Shortcut.Save()",
             "}",
+            "else",
+            "{",
+            "   exit 1",
+            "}",
             "Remove-Item \"$dir\\README.md\" -Force"
         ]
     }
