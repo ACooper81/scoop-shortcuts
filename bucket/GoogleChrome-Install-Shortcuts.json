@@ -19,7 +19,7 @@
             "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
             "{",
-            "   New-Item -Path $ShortcutDestinationFolder -ItemType directory",
+            "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
             "   $WshShell = New-Object -comObject WScript.Shell",
             "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestinationFile\")",
             "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
