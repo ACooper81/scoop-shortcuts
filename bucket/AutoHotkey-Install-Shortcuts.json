@@ -1,5 +1,5 @@
 {
-    "version": "200726.2217",
+    "version": "200726.2219",
     "description": "Create AutoHotkey shortcuts",
     "homepage": "https://www.autohotkey.com/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -25,7 +25,7 @@
             "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
             "   $Shortcut.Save()",
             "   $Shortcut2 = $WshShell.CreateShortcut(\"$ShortcutDestinationFolder\\Windows Spy.lnk\")",
-            "   $Shortcut2.TargetPath = \"$ProgramFilesPath\\AutoHotkey\\WindowsSpy.ahk\"",
+            "   $Shortcut2.TargetPath = \"$ProgramFilesPath\\AutoHotkey\\WindowSpy.ahk\"",
             "   $Shortcut2.Save()",
             "   $Shortcut3 = $WshShell.CreateShortcut(\"$ShortcutDestinationFolder\\Convert .ahk to .exe.lnk\")",
             "   $Shortcut3.TargetPath = \"$ProgramFilesPath\\AutoHotkey\\Compiler\\Ahk2Exe.exe\"",
