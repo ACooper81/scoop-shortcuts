@@ -1,5 +1,5 @@
 {
-    "version": "200719.1706",
+    "version": "200726.1850",
     "description": "Create Adobe Acrobat Reader DC shortcuts",
     "homepage": "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
