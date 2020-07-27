@@ -1,5 +1,5 @@
 {
-    "version": "200727.1757",
+    "version": "200727.1758",
     "description": "Create AutoIt shortcuts",
     "homepage": "https://www.autoitscript.com/site/autoit/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -14,7 +14,7 @@
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
             "$ShortcutName = \"AutoIt\"",
             "$ShortcutProgramType = \"Programming\"",
-            "$ShortcutTarget = \"$ProgramFilesX86Path\\AutoIt3\\AutoIt.chm\"",
+            "$ShortcutTarget = \"$ProgramFilesX86Path\\AutoIt3\\AutoIt3Help.exe\"",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\\AutoIt\"",
             "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\AutoIt Help File.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
