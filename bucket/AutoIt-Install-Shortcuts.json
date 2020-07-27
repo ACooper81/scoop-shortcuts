@@ -1,5 +1,5 @@
 {
-    "version": "200727.1758",
+    "version": "200727.1802",
     "description": "Create AutoIt shortcuts",
     "homepage": "https://www.autoitscript.com/site/autoit/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -22,7 +22,7 @@
             "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
             "   $WshShell = New-Object -comObject WScript.Shell",
             "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestinationFile\")",
-            "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
+            "   $Shortcut.TargetPath = \"$ProgramFilesX86Path\\AutoIt3\\AutoIt3Help.exe\"",
             "   $Shortcut.Save()",
             "   $Shortcut2 = $WshShell.CreateShortcut(\"$ShortcutDestinationFolder\\AutoIt Window Info (x86).lnk\")",
             "   $Shortcut2.TargetPath = \"$ProgramFilesX86Path\\AutoIt3\\Au3Info.exe\"",
