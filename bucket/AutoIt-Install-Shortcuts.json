@@ -1,5 +1,5 @@
 {
-    "version": "200727.1748",
+    "version": "200727.1757",
     "description": "Create AutoIt shortcuts",
     "homepage": "https://www.autoitscript.com/site/autoit/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -31,7 +31,7 @@
             "   $Shortcut3.TargetPath = \"$ProgramFilesX86Path\\AutoIt3\\Au3Info_x64.exe\"",
             "   $Shortcut3.Save()",
             "   $Shortcut4 = $WshShell.CreateShortcut(\"$ShortcutDestinationFolder\\Compile Script to .exe (x86).lnk\")",
-            "   $Shortcut4.TargetPath = \"$ProgramFilesX86Path\\AutoIt3\\AutoIt3\\Aut2Exe\\Aut2exe.exe\"",
+            "   $Shortcut4.TargetPath = \"$ProgramFilesX86Path\\AutoIt3\\Aut2Exe\\Aut2exe.exe\"",
             "   $Shortcut4.Save()",
             "   $Shortcut5 = $WshShell.CreateShortcut(\"$ShortcutDestinationFolder\\Compile Script to .exe (x64).lnk\")",
             "   $Shortcut5.TargetPath = \"$ProgramFilesX86Path\\AutoIt3\\Aut2Exe\\Aut2exe_x64.exe\"",
