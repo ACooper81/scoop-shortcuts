@@ -13,7 +13,7 @@
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
             "$ShortcutName = \"balenaEtcher\"",
             "$ShortcutProgramType = \"Applications\"",
-            "$ShortcutTarget = \"$ProgramFilesPath\\Programs\\balena-etcher\\balenaEtcher.exe\"",
+            "$ShortcutTarget = \"$LocalAppDataath\\Programs\\balena-etcher\\balenaEtcher.exe\"",
             "$ShortcutDestinationFolder = \"$StartMenuPath\\$ShortcutProgramType\"",
             "$ShortcutDestinationFile = \"$StartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
