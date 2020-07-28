@@ -1,5 +1,5 @@
 {
-    "version": "200728.2235",
+    "version": "200728.2249",
     "description": "Create Firefox shortcuts",
     "homepage": "https://www.mozilla.org/firefox/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -12,7 +12,7 @@
             "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
             "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
-            "$ShortcutName = \"Mozilla Firefox\"",
+            "$ShortcutName = \"Firefox\"",
             "$ShortcutProgramType = \"Internet Browsers\"",
             "$ShortcutTarget = \"$ProgramFilesPath\\Mozilla Firefox\\firefox.exe\"",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
