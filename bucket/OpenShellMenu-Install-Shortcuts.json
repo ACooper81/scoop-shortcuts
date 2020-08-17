@@ -30,7 +30,7 @@
             "   exit 1",
             "}",
             "$ShortcutName = \"Open-Shell-Menu Settings\"",
-            "$ShortcutProgramType = \"Applications\"",
+            "$ShortcutProgramType = \"Utilities\"",
             "$ShortcutTarget = \"$ProgramFilesPath\\Open-Shell\\StartMenu.exe\" -settings",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
             "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
