@@ -1,0 +1,34 @@
+{
+    "version": "200817.1804",
+    "description": "Create Microsoft Teams shortcuts",
+    "homepage": "https://products.office.com/en-AU/microsoft-teams/group-chat-software",
+    "notes": "It will only create the shortcuts if the program is installed in the default location",
+    "url": "https://raw.githubusercontent.com/ACooper81/SharedFiles/master/README.md",
+    "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
+    "installer": {
+        "script": [
+            "$LocalAppDataPath = [Environment]::GetFolderPath(\"LocalApplicationData\")",
+            "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
+            "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
+            "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
+            "$ShortcutName = \"Microsoft Teams\"",
+            "$ShortcutProgramType = \"Applications\"",
+            "$ShortcutTarget = \"$LocalAppDataPath\\Microsoft\\Teams\\Update.exe\"",
+            "$ShortcutDestinationFolder = \"$StartMenuPath\\$ShortcutProgramType\"",
+            "$ShortcutDestinationFile = \"$StartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
+            "if (Test-Path \"$ShortcutTarget\")",
+            "{",
+            "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
+            "   $WshShell = New-Object -comObject WScript.Shell",
+            "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestinationFile\")",
+            "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
+            "   $Shortcut.Save()",
+            "}",
+            "else",
+            "{",
+            "   exit 1",
+            "}",
+            "Remove-Item \"$dir\\README.md\" -Force"
+        ]
+    }
+}
