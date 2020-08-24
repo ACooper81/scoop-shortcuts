@@ -13,7 +13,7 @@
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
             "$ShortcutName = \"YouTube Music Desktop\"",
             "$ShortcutProgramType = \"Applications\"",
-            "$ShortcutTarget = \"$LocalAppDataPath\\youtube-music-desktop-app\\YouTube Music Destop App.exe\"",
+            "$ShortcutTarget = \"$LocalAppDataPath\\Programs\\youtube-music-desktop-app\\YouTube Music Destop App.exe\"",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
             "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
