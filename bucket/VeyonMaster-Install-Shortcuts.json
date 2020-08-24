@@ -1,5 +1,5 @@
 {
-    "version": "200824.2002",
+    "version": "200824.2004",
     "description": "Create Veyon Master shortcuts",
     "homepage": "https://veyon.io/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -26,7 +26,7 @@
             "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
             "   $Shortcut.Save()",
             "   if(!(Test-Path -Path $ShortcutDestinationFolder2 )){New-Item -Path $ShortcutDestinationFolder2 -ItemType directory}",
-            "   $Shortcut2 = $WshShell.CreateShortcut(\"$CommonStartMenuPath\\$ShortcutProgramType\\Veyon Configurator.lnk\")",
+            "   $Shortcut2 = $WshShell.CreateShortcut(\"$CommonStartMenuPath\\Utilities\\Veyon Configurator.lnk\")",
             "   $Shortcut2.TargetPath = \"$ProgramFilesPath\\Veyon\\veyon-configurator.exe\"",
             "   $Shortcut2.Save()",
             "}",
