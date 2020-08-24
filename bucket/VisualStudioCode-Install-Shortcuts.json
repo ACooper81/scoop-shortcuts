@@ -1,0 +1,39 @@
+{
+    "version": "200824.2018",
+    "description": "Create Visual Studio Code shortcuts",
+    "homepage": "https://code.visualstudio.com/",
+    "notes": "It will only create the shortcuts if the program is installed in the default location",
+    "url": "https://raw.githubusercontent.com/ACooper81/SharedFiles/master/README.md",
+    "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
+    "installer": {
+        "script": [
+            "$ProgramFilesPath = [Environment]::GetFolderPath(\"ProgramFiles\")",
+            "$ProgramFilesX86Path = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
+            "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
+            "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
+            "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
+            "$ShortcutName = \"Visual Studio Code\"",
+            "$ShortcutProgramType = \"Programming\"",
+            "if ([System.Environment]::Is64BitOperatingSystem){",
+            "   $ShortcutTarget = \"$ProgramFilesPath\\Application\\executable.exe\"",
+            "}else{",
+            "   $ShortcutTarget = \"$ProgramFilesPath\\Application\\executable.exe\"",
+            "}",
+            "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
+            "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
+            "if (Test-Path \"$ShortcutTarget\")",
+            "{",
+            "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
+            "   $WshShell = New-Object -comObject WScript.Shell",
+            "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestinationFile\")",
+            "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
+            "   $Shortcut.Save()",
+            "}",
+            "else",
+            "{",
+            "   exit 1",
+            "}",
+            "Remove-Item \"$dir\\README.md\" -Force"
+        ]
+    }
+}
