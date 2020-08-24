@@ -1,5 +1,5 @@
 {
-    "version": "200824.2020",
+    "version": "200824.2022",
     "description": "Create Visual Studio Code shortcuts",
     "homepage": "https://code.visualstudio.com/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
