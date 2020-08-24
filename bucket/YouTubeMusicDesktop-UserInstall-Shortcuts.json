@@ -1,0 +1,34 @@
+{
+    "version": "200824.2032",
+    "description": "Create YouTube Music Desktop shortcuts",
+    "homepage": "https://ytmdesktop.app/",
+    "notes": "It will only create the shortcuts if the program is installed in the default location",
+    "url": "https://raw.githubusercontent.com/ACooper81/SharedFiles/master/README.md",
+    "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
+    "installer": {
+        "script": [
+            "$LocalAppDataPath = [Environment]::GetFolderPath(\"LocalApplicationData\")",
+            "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
+            "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
+            "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
+            "$ShortcutName = \"YouTube Music Desktop\"",
+            "$ShortcutProgramType = \"Applications\"",
+            "$ShortcutTarget = \"$LocalAppDataPath\\youtube-music-desktop-app\\YouTube Music Destop App.exe\"",
+            "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
+            "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
+            "if (Test-Path \"$ShortcutTarget\")",
+            "{",
+            "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
+            "   $WshShell = New-Object -comObject WScript.Shell",
+            "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestinationFile\")",
+            "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
+            "   $Shortcut.Save()",
+            "}",
+            "else",
+            "{",
+            "   exit 1",
+            "}",
+            "Remove-Item \"$dir\\README.md\" -Force"
+        ]
+    }
+}
