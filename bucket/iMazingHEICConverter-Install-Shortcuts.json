@@ -1,5 +1,5 @@
 {
-    "version": "200903.11507",
+    "version": "200903.1507",
     "description": "Create iMazing HEIC Converter shortcuts",
     "homepage": "https://imazing.com/heic",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -14,7 +14,7 @@
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
             "$ShortcutName = \"iMazing HEIC Converter\"",
             "$ShortcutProgramType = \"Utilities\"",
-            "$ShortcutTarget = \"$ProgramFilesPath\\DigiDNA\\iMazing HEIC Converter.exe\"",
+            "$ShortcutTarget = \"$ProgramFilesPath\\DigiDNA\\iMazing HEIC Converter\\iMazing HEIC Converter.exe\"",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
             "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
