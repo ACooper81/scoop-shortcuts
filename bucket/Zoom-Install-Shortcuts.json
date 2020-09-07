@@ -1,5 +1,5 @@
 {
-    "version": "200824.2215",
+    "version": "200907.1818",
     "description": "Create Zoom shortcuts",
     "homepage": "https://zoom.us/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
