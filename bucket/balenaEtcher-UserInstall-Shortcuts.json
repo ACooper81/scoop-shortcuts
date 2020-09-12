@@ -7,13 +7,13 @@
     "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
     "installer": {
         "script": [
-            "$LocalAppDataath = [Environment]::GetFolderPath(\"LocalApplicationData\")",
+            "$LocalAppDataPath = [Environment]::GetFolderPath(\"LocalApplicationData\")",
             "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
             "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
             "$ShortcutName = \"balenaEtcher\"",
             "$ShortcutProgramType = \"Applications\"",
-            "$ShortcutTarget = \"$LocalAppDataath\\Programs\\balena-etcher\\balenaEtcher.exe\"",
+            "$ShortcutTarget = \"$LocalAppDataPath\\Programs\\balena-etcher\\balenaEtcher.exe\"",
             "$ShortcutDestinationFolder = \"$StartMenuPath\\$ShortcutProgramType\"",
             "$ShortcutDestinationFile = \"$StartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
