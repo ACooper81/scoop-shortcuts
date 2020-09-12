@@ -1,5 +1,5 @@
 {
-    "version": "200913.0035",
+    "version": "200913.0046",
     "description": "Create Amazon Games shortcuts",
     "homepage": "https://websiteurl",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -12,7 +12,7 @@
             "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
             "$ShortcutName = \"Amazon Games\"",
-            "$ShortcutProgramType = \"Applications\"",
+            "$ShortcutProgramType = \"Games\"",
             "$ShortcutTarget = \"$LocalAppDataPath\\Amazon Games\\App\\Amazon Games.exe\"",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
             "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
