@@ -1,5 +1,5 @@
 {
-    "version": "200914.2153",
+    "version": "200914.2156",
     "description": "Create GOG Galaxy shortcuts",
     "homepage": "https://www.gog.com/galaxy",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -14,7 +14,7 @@
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
             "$ShortcutName = \"GOG Galaxy\"",
             "$ShortcutProgramType = \"Games\\Stores & Launchers\"",
-            "$ShortcutTarget = \"$ProgramFilesX86Path\\Application\\executable.exe\"",
+            "$ShortcutTarget = \"$ProgramFilesX86Path\\GOG Galaxy\\GalaxyClient.exe\"",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
             "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
