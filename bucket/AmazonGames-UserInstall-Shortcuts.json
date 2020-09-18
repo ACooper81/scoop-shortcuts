@@ -1,5 +1,5 @@
 {
-    "version": "200914.2035",
+    "version": "200918.2010",
     "description": "Create Amazon Games shortcuts",
     "homepage": "https://websiteurl",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -29,6 +29,9 @@
             "{",
             "   exit 1",
             "}",
+            "$programname = \"Amazon Games\"",
+            "$CommonDesktopPath = [Environment]::GetFolderPath(\"CommonDesktopDirectory\")",
+            "if (Test-Path \"$CommonDesktopPath\\$programname.lnk\") {Remove-Item \"$CommonDesktopPath\\$programname.lnk\" -Force}",
             "Remove-Item \"$dir\\README.md\" -Force"
         ]
     }
