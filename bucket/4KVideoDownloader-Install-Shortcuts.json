@@ -1,5 +1,5 @@
 {
-    "version": "200719.1706",
+    "version": "200918.2010",
     "description": "Create 4K Video Downloader shortcuts",
     "homepage": "https://www.4kdownload.com/products/product-videodownloader",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -29,6 +29,8 @@
             "{",
             "   exit 1",
             "}",
+            "$CommonDesktopPath = [Environment]::GetFolderPath(\"CommonDesktopDirectory\")",
+            "if (Test-Path \"$CommonDesktopPath\\4K Video Downloader.lnk\") {Remove-Item \"$CommonDesktopPath\\4K Video Downloader.lnk\" -Force}",
             "Remove-Item \"$dir\\README.md\" -Force"
         ]
     }
