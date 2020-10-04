@@ -1,5 +1,5 @@
 {
-    "version": "201004.2321",
+    "version": "201004.2323",
     "description": "Create SpywareBlaster shortcuts",
     "homepage": "ttps://www.brightfort.com/spywareblaster.html",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -15,9 +15,9 @@
             "$ShortcutName = \"SpywareBlaster\"",
             "$ShortcutProgramType = \"Utilities\"",
             "if ([System.Environment]::Is64BitOperatingSystem){",
-            "   $ShortcutTarget = \"$ProgramFilesX86Path\\SpywareBlaster\\spywarebalster.exe\"",
+            "   $ShortcutTarget = \"$ProgramFilesX86Path\\SpywareBlaster\\spywareblaster.exe\"",
             "}else{",
-            "   $ShortcutTarget = \"$ProgramFilesPath\\SpywareBlaster\\spywarebalster.exe\"",
+            "   $ShortcutTarget = \"$ProgramFilesPath\\SpywareBlaster\\spywareblaster.exe\"",
             "}",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
             "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
