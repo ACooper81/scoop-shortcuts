@@ -1,0 +1,40 @@
+{
+    "version": "201025.2140",
+    "description": "Create Mouse without Borders shortcuts",
+    "homepage": "https://www.microsoft.com/en-us/garage/profiles/mouse-without-borders/",
+    "notes": "It will only create the shortcuts if the program is installed in the default location",
+    "url": "https://raw.githubusercontent.com/ACooper81/SharedFiles/master/README.md",
+    "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
+    "installer": {
+        "script": [
+            "$ProgramFilesPath = [Environment]::GetFolderPath(\"ProgramFiles\")",
+            "$ProgramFilesX86Path = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
+            "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
+            "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
+            "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
+            "$ShortcutName = \"Mouse without Borders\"",
+            "$ShortcutProgramType = \"Utilities\"",
+            "if ([System.Environment]::Is64BitOperatingSystem){",
+            "   $ShortcutTarget = \"$ProgramFilesX86Path\\Microsoft Garage\\Mouse without Borders\\MouseWithoutBorders.exe\"",
+            "}else{",
+            "   $ShortcutTarget = \"$ProgramFilesPath\\Microsoft Garage\\Mouse without Borders\\MouseWithoutBorders.exe\"",
+            "}",
+            "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
+            "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
+            "if (Test-Path \"$ShortcutTarget\")",
+            "{",
+            "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
+            "   $WshShell = New-Object -comObject WScript.Shell",
+            "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestinationFile\")",
+            "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
+            "   $Shortcut.Description = \"Control up to four computers from a single mouse and keyboard\"",
+            "   $Shortcut.Save()",
+            "}",
+            "else",
+            "{",
+            "   exit 1",
+            "}",
+            "Remove-Item \"$dir\\README.md\" -Force"
+        ]
+    }
+}
