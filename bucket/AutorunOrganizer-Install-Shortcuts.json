@@ -14,7 +14,7 @@
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
             "$ShortcutName = \"Autorun Organizer\"",
             "$ShortcutProgramType = \"Utilities\"",
-            "$ShortcutTarget = \"$ProgramFilesPath\\Autorun Organizer\\SoftOrganizer.exe\"",
+            "$ShortcutTarget = \"$ProgramFilesPath\\Autorun Organizer\\AutorunOrganizer.exe\"",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
             "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
