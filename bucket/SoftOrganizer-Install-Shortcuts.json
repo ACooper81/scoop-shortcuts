@@ -1,7 +1,7 @@
 {
     "version": "201105.2106",
     "description": "Create Soft Organizer shortcuts",
-    "homepage": "https://websiteurl",
+    "homepage": "https://www.chemtable.com/soft-organizer.htm",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
     "url": "https://raw.githubusercontent.com/ACooper81/SharedFiles/master/README.md",
     "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
