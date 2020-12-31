@@ -14,7 +14,7 @@
             "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
             "$ShortcutName = \"Google Chrome\"",
             "$ShortcutProgramType = \"Internet Browsers\"",
-            "$ShortcutTarget = \"$ProgramFilesX86Path\\Google\\Chrome\\Application\\chrome.exe\"",
+            "$ShortcutTarget = \"$ProgramFilesPath\\Google\\Chrome\\Application\\chrome.exe\"",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
             "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutDestinationFolder\\Chrome.lnk\")",
