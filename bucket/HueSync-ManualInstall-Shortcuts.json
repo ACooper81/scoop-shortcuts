@@ -1,0 +1,37 @@
+{
+    "##": "https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1",
+    "version": "210217.2113",
+    "description": "Create Hue Sync shortcuts",
+    "homepage": "https://www.philips-hue.com/en-hk/entertainment/hue-sync",
+    "notes": "It will only create the shortcuts if the program is installed in the default location",
+    "url": "https://raw.githubusercontent.com/ACooper81/SharedFiles/master/README.md",
+    "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
+    "installer": {
+        "script": [
+            "$ProgramFilesPath = [Environment]::GetFolderPath(\"ProgramFiles\")",
+            "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
+            "$ShortcutName = \"Hue Sync\"",
+            "$ShortcutProgramType = \"Applications\"",
+            "if ([System.Environment]::Is64BitOperatingSystem){",
+            "   $ShortcutTarget = \"$ProgramFilesPath\\Hue Sync\\HueSync.exe\"",
+            "}",
+            "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
+            "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
+            "if (Test-Path \"$ShortcutTarget\")",
+            "{",
+            "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
+            "   $WshShell = New-Object -comObject WScript.Shell",
+            "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestinationFile\")",
+            "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
+            "   $Shortcut.Description = \"Sync your lights with movies, music and games\"",
+            "   $Shortcut.WindowStyle = 0",
+            "   $Shortcut.Save()",
+            "}",
+            "else",
+            "{",
+            "   exit 1",
+            "}",
+            "Remove-Item \"$dir\\README.md\" -Force"
+        ]
+    }
+}
