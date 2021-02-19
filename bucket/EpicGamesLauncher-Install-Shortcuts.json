@@ -1,0 +1,38 @@
+{
+    "##": "https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1",
+    "version": "210219.2256",
+    "description": "Create Epic Games Launcher shortcuts",
+    "homepage": "https://www.epicgames.com/store/en-US/",
+    "notes": "It will only create the shortcuts if the program is installed in the default location",
+    "url": "https://raw.githubusercontent.com/ACooper81/SharedFiles/master/README.md",
+    "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
+    "installer": {
+        "script": [
+            "$ProgramFilesX86Path = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
+            "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
+            "$ShortcutName = \"Epic Games Launcher\"",
+            "$ShortcutProgramType = \"Games\\Stores & Launchers\"",
+            "if ([System.Environment]::Is64BitOperatingSystem){",
+            "   $ShortcutTarget = \"$ProgramFilesX86Path\\Epic Games\\Launcher\\Portal\\Binaries\\Win32\\EpicGamesLauncher.exe\"",
+            "}else{",
+            "   $ShortcutTarget = \"$ProgramFilesPath\\Epic Games\\Launcher\\Portal\\Binaries\\Win32\\EpicGamesLauncher.exe\"",
+            "}",
+            "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
+            "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
+            "if (Test-Path \"$ShortcutTarget\")",
+            "{",
+            "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
+            "   $WshShell = New-Object -comObject WScript.Shell",
+            "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestinationFile\")",
+            "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
+            "   $Shortcut.Description = \"\"",
+            "   $Shortcut.Save()",
+            "}",
+            "else",
+            "{",
+            "   exit 1",
+            "}",
+            "Remove-Item \"$dir\\README.md\" -Force"
+        ]
+    }
+}
