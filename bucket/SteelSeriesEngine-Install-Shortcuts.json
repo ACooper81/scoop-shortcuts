@@ -10,7 +10,7 @@
         "script": [
             "$ProgramFilesPath = [Environment]::GetFolderPath(\"ProgramFiles\")",
             "$CommonStartMenuPath = [Environment]::GetFolderPath(\"CommonStartMenu\")",
-            "$ShortcutName = \"SteelSeries Engine\"",
+            "$ShortcutName = \"SteelSeries Engine 3\"",
             "$ShortcutProgramType = \"Utilities\"",
             "$ShortcutTarget = \"$ProgramFilesPath\\SteelSeries\\SteelSeries Engine 3\\SteelSeriesEngine3.exe\"",
             "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
