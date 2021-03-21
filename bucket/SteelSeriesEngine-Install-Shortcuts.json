@@ -21,7 +21,7 @@
             "   $WshShell = New-Object -comObject WScript.Shell",
             "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestinationFile\")",
             "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
-            "   $Shortcut.Arguments = \"-dataPath=\"C:\\ProgramData\\SteelSeries\\SteelSeries Engine 3\" -dbEnv=production\"",
+            "   $Shortcut.Arguments = '-dataPath=\"C:\\ProgramData\\SteelSeries\\SteelSeries Engine 3\" -dbEnv=production'",
             "   $Shortcut.Description = \"One application for all your settings\"",
             "   $Shortcut.Save()",
             "}",
