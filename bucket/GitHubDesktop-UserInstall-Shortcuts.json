@@ -1,5 +1,5 @@
 {
-    "version": "200816.2109",
+    "version": "210405.1458",
     "description": "Create GitHub Desktop shortcuts",
     "homepage": "https://desktop.github.com/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
