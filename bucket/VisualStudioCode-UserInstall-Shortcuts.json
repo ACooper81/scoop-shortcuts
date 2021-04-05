@@ -1,5 +1,5 @@
 {
-    "version": "210404.2232",
+    "version": "210405.1458",
     "description": "Create Visual Studio Code shortcuts",
     "homepage": "https://code.visualstudio.com/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -13,8 +13,8 @@
             "$ShortcutName = \"Visual Studio Code\"",
             "$ShortcutProgramType = \"Programming\"",
             "$ShortcutTarget = \"$LocalAppDataPath\\Programs\\Microsoft VS Code\\Code.exe\"",
-            "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
-            "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
+            "$ShortcutDestinationFolder = \"$StartMenuPath\\$ShortcutProgramType\"",
+            "$ShortcutDestinationFile = \"$StartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
             "{",
             "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
