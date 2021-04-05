@@ -1,5 +1,5 @@
 {
-    "version": "210405.1436",
+    "version": "210405.1447",
     "description": "Create Deezer Desktop shortcuts",
     "homepage": "https://www.deezer.com/en/download?utm_source=web_link",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
