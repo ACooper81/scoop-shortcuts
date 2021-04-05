@@ -1,0 +1,33 @@
+{
+    "version": "210405.1436",
+    "description": "Create Deezer Desktop shortcuts",
+    "homepage": "https://www.deezer.com/en/download?utm_source=web_link",
+    "notes": "It will only create the shortcuts if the program is installed in the default location",
+    "url": "https://raw.githubusercontent.com/ACooper81/SharedFiles/master/README.md",
+    "hash": "f0947bfbb419bbaea8f2cf0dfee70dddff41da4ed64ebb8ed8eecab13de5c9b3",
+    "installer": {
+        "script": [
+            "$LocalAppDataPath = [Environment]::GetFolderPath(\"LocalApplicationData\")",
+            "$StartMenuPath = [Environment]::GetFolderPath(\"StartMenu\")",
+            "$EnvironmentSpecialFolder = \"https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1\"",
+            "$ShortcutName = \"Deezer Desktop\"",
+            "$ShortcutProgramType = \"Applications\"",
+            "$ShortcutTarget = \"$LocalAppDataPath\\Programs\\deezer-desktop\\Deezer.exe\"",
+            "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
+            "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
+            "if (Test-Path \"$ShortcutTarget\")",
+            "{",
+            "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
+            "   $WshShell = New-Object -comObject WScript.Shell",
+            "   $Shortcut = $WshShell.CreateShortcut(\"$ShortcutDestinationFile\")",
+            "   $Shortcut.TargetPath = \"$ShortcutTarget\"",
+            "   $Shortcut.Save()",
+            "}",
+            "else",
+            "{",
+            "   exit 1",
+            "}",
+            "Remove-Item \"$dir\\README.md\" -Force"
+        ]
+    }
+}
