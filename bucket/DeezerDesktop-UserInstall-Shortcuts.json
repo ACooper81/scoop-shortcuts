@@ -1,5 +1,5 @@
 {
-    "version": "210405.1447",
+    "version": "210405.1458",
     "description": "Create Deezer Desktop shortcuts",
     "homepage": "https://www.deezer.com/en/download?utm_source=web_link",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
@@ -13,8 +13,8 @@
             "$ShortcutName = \"Deezer Desktop\"",
             "$ShortcutProgramType = \"Applications\"",
             "$ShortcutTarget = \"$LocalAppDataPath\\Programs\\deezer-desktop\\Deezer.exe\"",
-            "$ShortcutDestinationFolder = \"$CommonStartMenuPath\\$ShortcutProgramType\"",
-            "$ShortcutDestinationFile = \"$CommonStartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
+            "$ShortcutDestinationFolder = \"$StartMenuPath\\$ShortcutProgramType\"",
+            "$ShortcutDestinationFile = \"$StartMenuPath\\$ShortcutProgramType\\$ShortcutName.lnk\"",
             "if (Test-Path \"$ShortcutTarget\")",
             "{",
             "   if(!(Test-Path -Path $ShortcutDestinationFolder )){New-Item -Path $ShortcutDestinationFolder -ItemType directory}",
