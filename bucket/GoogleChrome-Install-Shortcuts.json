@@ -1,5 +1,5 @@
 {
-    "version": "200901.1900",
+    "version": "210413.2150",
     "description": "Create Google Chrome shortcuts",
     "homepage": "https://www.google.com/chrome/",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
