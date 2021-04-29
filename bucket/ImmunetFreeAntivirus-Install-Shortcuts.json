@@ -1,6 +1,6 @@
 {
     "##": "https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1",
-    "version": "0",
+    "version": "7.4.2",
     "description": "Create Immunet Free Antivirus shortcuts",
     "homepage": "https://www.immunet.com",
     "notes": "It will only create the shortcuts if the program is installed in the default location",
